@@ -4,7 +4,7 @@
   "description": "Haalt weggejoriste reaguursels terug. Omdat het kan.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run kyt:test && npm run lint && npm run lint-style",
     "dev": "kyt dev",
     "build": "kyt build",
     "start": "kyt start",

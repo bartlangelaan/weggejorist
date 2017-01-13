@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- node
+
+before_deploy:
+- npm run build
+
+deploy:
+  skip_cleanup: true
+  provider: pages
+  github-token:
+    secure: "L+UzvDOkSvs31qZql1d/RRVri/QJZMWCc5yuApgyxPpbPMeyM+IVqg9BZXmdJZ+JAVWUP5tih0UV63wTIbo4tT76c+3uYtNYNnt0SgvK3S55FWSVEN1vhNAbn7N0y3q/rDUj+1nRMPvgemaIFybxWuPrejtk/q429DGKVhgrBVDOVBkciTEDcujBUi8i6XeY+zhmf7i5yafmNL63PiWUesZdWp4mgtQEI+MRimlkdqyRkvAhg+yXZRoS8Neqi5/e1Rx5v+mlAKB7nuX6So3OvYG4wrT5WADrOR7Zj9B7VSufHYbna/IkNorz7mHzQKaeatvqKsQ+m3q5zuDvpQfG0a+5mZIHaKlT61VHYXkGDSQ6V09Skv5G3wIR7PVnL+V6eEF+ydwmYw8gBKQaxMb7fWwqw0y2zIma3A5FmfRAM6xL+Y2XzDCbesDhyN2biJ8sJp0yzdoXM862SM9ZDsS27qwRk8VZHNFXXR7lkLu1LdVwT0LlwQrPvraRNEY+4pl/LuiHpE2Wh2iVilBdzkChBo3fMXTQoQTRTAR92c3ErF+YuPXz1MUBG+JJuxLHTTAb7175/Qg67jA2iXJBeFxy22jo7jjq2q1LXaCz4e/nF3hnO4a2m4YKMApqVtLE1ixcGtCJQbdaRReiuPk2qPhBDiAJ9BSLbgMpSAcpAMaL+Rg="
+  local-dir: build/public
