@@ -1,0 +1,38 @@
+{
+  "name": "weggejorist",
+  "version": "1.0.0",
+  "description": "Haalt weggejoriste reaguursels terug. Omdat het kan.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "kyt dev",
+    "build": "kyt build",
+    "start": "kyt start",
+    "kyt:test": "kyt test",
+    "test-watch": "kyt test -- --watch",
+    "test-coverage": "kyt test -- --coverage",
+    "lint": "kyt lint",
+    "lint-style": "kyt lint-style",
+    "proto": "kyt proto",
+    "kyt:help": "kyt --help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartlangelaan/weggejorist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bartlangelaan/weggejorist/issues"
+  },
+  "homepage": "https://github.com/bartlangelaan/weggejorist#readme",
+  "dependencies": {
+    "kyt": "^0.3.0",
+    "enzyme": "^2.4.1",
+    "html-webpack-plugin": "^2.22.0",
+    "react": "^15.3.0",
+    "react-addons-test-utils": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-router": "^2.6.1"
+  }
+}
