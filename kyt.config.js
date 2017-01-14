@@ -6,6 +6,8 @@ module.exports = {
   debug: false,
   hasServer: false,
   modifyWebpackConfig: (config, options) => {
+    config.output.publicPath = '';
+
     if (options.type === 'client') {
       config.plugins.push(new HtmlWebpackPlugin({
         template: 'src/index.ejs'
