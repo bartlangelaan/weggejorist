@@ -1,22 +1,8 @@
 
-import React, { PropTypes } from 'react';
-import Link from 'react-router/lib/Link';
-import styles from './styles.scss';
+import { PropTypes } from 'react';
 
 function App({ children }) {
-  return (
-    <div>
-      <i className={styles.logo} />
-      <ul className={styles.nav}>
-        <li className={styles.navItem}>
-          <Link className={styles.link} to="/">Home</Link>
-        </li>
-      </ul>
-      <div className={styles.content}>
-        {children}
-      </div>
-    </div>
-  );
+  return children;
 }
 
 App.propTypes = {

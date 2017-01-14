@@ -12,6 +12,7 @@
     "test-watch": "kyt test -- --watch",
     "test-coverage": "kyt test -- --coverage",
     "lint": "kyt lint",
+    "lint:fix": "eslint src --fix",
     "lint-style": "kyt lint-style",
     "proto": "kyt proto",
     "kyt:help": "kyt --help"

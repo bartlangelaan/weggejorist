@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import Comment from '../Comment';
+import React, { Component, PropTypes } from 'react';
 import Waypoint from 'react-waypoint';
+import Comment from '../Comment';
 import styles from './styles.css';
 
 export default class CommentWidget extends Component {
@@ -11,8 +11,8 @@ export default class CommentWidget extends Component {
     this.state = {
       posts: [],
       loading: false,
-      more: true
-    }
+      more: true,
+    };
 
     this.loadNew = this.loadNew.bind(this);
   }
@@ -22,25 +22,24 @@ export default class CommentWidget extends Component {
   }
 
   loadNew() {
-    if(this.state.loading) return;
+    if (this.state.loading) return;
 
-    this.setState({loading: true});
+    this.setState({ loading: true });
 
     const latest = this.state.posts[this.state.posts.length - 1];
-    fetch('https://weggejorist.herokuapp.com' + this.props.query + (latest ? '&before=' + latest.commentId : ''))
+    fetch(`https://weggejorist.herokuapp.com${this.props.query + (latest ? `&before=${latest.commentId}` : '')}`)
       .then(res => res.json())
-      .then(res => {
+      .then((res) => {
         this.setState({
           posts: [...this.state.posts, ...res],
           loading: false,
-          more: res.length ? true : false
-        })
-      })
+          more: res.length > 0,
+        });
+      });
   }
 
   render() {
-    console.log('styles:', styles);
-    return <section className={styles.widget}>
+    return (<section className={styles.widget}>
       <h2 className={styles.title}>{this.props.title}</h2>
       <div className={styles.scrollable}>
 
@@ -55,7 +54,12 @@ export default class CommentWidget extends Component {
         </div>
 
       </div>
-    </section>
+    </section>);
   }
 
 }
+
+CommentWidget.propTypes = {
+  title: PropTypes.string.isRequired,
+  query: PropTypes.string.isRequired,
+};
