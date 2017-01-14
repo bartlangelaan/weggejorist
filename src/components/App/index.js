@@ -11,9 +11,6 @@ function App({ children }) {
         <li className={styles.navItem}>
           <Link className={styles.link} to="/">Home</Link>
         </li>
-        <li className={styles.navItem}>
-          <Link className={styles.link} to="/tools">Tools</Link>
-        </li>
       </ul>
       <div className={styles.content}>
         {children}

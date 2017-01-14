@@ -3,6 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Root from './Root';
+import 'normalize.css';
 
 const root = document.querySelector('#root');
 

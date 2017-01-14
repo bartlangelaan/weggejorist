@@ -1,0 +1,19 @@
+.wrapper {
+  clear:both;
+  margin: 5px;
+}
+.content {
+
+}
+
+.user {
+  font-size: 0.8em;
+  color: grey;
+}
+
+.time {
+  font-size: 0.8em;
+  color: grey;
+  float: right;
+  clear-after: both;
+}
