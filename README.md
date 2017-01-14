@@ -1,0 +1,2 @@
+# weggejorist
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6c0fc5c002d04a1b8150c6ed68c63ef6)](https://www.codacy.com/app/langelaanbart/weggejorist?utm_source=github.com&utm_medium=referral&utm_content=bartlangelaan/weggejorist&utm_campaign=badger)
