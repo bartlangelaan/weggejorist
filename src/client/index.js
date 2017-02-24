@@ -3,6 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import 'normalize.css';
+import 'babel-polyfill';
 import Root from './Root';
 
 const root = document.querySelector('#root');

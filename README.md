@@ -4,7 +4,7 @@
 
 Heb je je ooit afgevraagd wat een reaguurder schreef dat Joris deed besluiten om het reaguursel te wegjorissen? Nu kan je het echt zien!
 
-Deze app slaat elke paar minuten alle reaguursels van de laatste 60 video's op Dumpert op. Als een reaguursel is -weggejorist- wordt de originele content opgeslagen. Ook -weggejorist en opgerot- wordt piekfijn geregistreerd.
+Deze webapp haalt alle weggejoriste comments gewoon terug. Voor uw plezier.
 
 ## FAQ
 
@@ -14,9 +14,9 @@ Ik krijg dagelijks zo veel vragen over deze unieke website, dat ik de meestgeste
 
 *Hierzo! https://bartlangelaan.github.io/weggejorist/*
 
-**Maar hallo! Nu worden comments nooit meer verwijderd dus!**
+**Maar hallo! Comments worden dus niet echt verwijderd!**
 
-*Niet gelijk zo boos doen. Maar inderdaad, ze worden hier nog steeds opgeslagen.*
+*Niet gelijk zo boos doen. Maar nee, die staan nog gewoon op de serverts van Dumpert.*
 
 **Waarom kies jij er voor om je vrije tijd te besteden aan het maken van deze trieste website?**
 
@@ -24,4 +24,4 @@ Ik krijg dagelijks zo veel vragen over deze unieke website, dat ik de meestgeste
 
 **Komen er nog meer awesome features?**
 
-*Jazeker! Binnenkort kan je ook statistieken bekijken als reaguursels per dag. Want die informatie wil iedereen hebben.*
+*Jazeker! Binnenkort komen er ook super awesome statistieken! Whoop!*

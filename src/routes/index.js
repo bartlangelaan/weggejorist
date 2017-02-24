@@ -1,13 +1,17 @@
 
 import React from 'react';
 import Route from 'react-router/lib/Route';
-import IndexRoute from 'react-router/lib/IndexRoute';
+import IndexRedirect from 'react-router/lib/IndexRedirect';
 import App from '../components/App';
-import Home from '../components/Home';
+import { Banned, Deleted } from '../components/Comments';
+import Stats from '../components/Stats';
 
 const routes = (
   <Route path="/" component={App}>
-    <IndexRoute component={Home} />
+    <IndexRedirect to="reaguursels" />
+    <Route path="reaguursels" component={Deleted} />
+    <Route path="reaguursels/opgerot" component={Banned} />
+    <Route path="stats" component={Stats} />
   </Route>
 );
 

@@ -1,9 +1,13 @@
 import React, { Component, PropTypes } from 'react';
+import RefreshIndicator from 'material-ui/RefreshIndicator';
 import Waypoint from 'react-waypoint';
 import Comment from '../Comment';
-import styles from './styles.css';
+import Banned from './Banned';
+import Deleted from './Deleted';
 
-export default class CommentWidget extends Component {
+import api from '../../api';
+
+export default class Comments extends Component {
 
   constructor(props) {
     super(props);
@@ -27,7 +31,7 @@ export default class CommentWidget extends Component {
     this.setState({ loading: true });
 
     const latest = this.state.posts[this.state.posts.length - 1];
-    fetch(`https://weggejorist.herokuapp.com${this.props.query + (latest ? `&before=${latest.commentId}` : '')}`)
+    fetch(`${api()}${this.props.query + (latest ? `&before=${latest.commentId}` : '')}`)
       .then(res => res.json())
       .then((res) => {
         this.setState({
@@ -39,9 +43,8 @@ export default class CommentWidget extends Component {
   }
 
   render() {
-    return (<section className={styles.widget}>
-      <h2 className={styles.title}>{this.props.title}</h2>
-      <div className={styles.scrollable}>
+    return (<section>
+      <div>
 
         {this.state.posts.map(post => <Comment key={post._id} {...post} />)}
 
@@ -49,9 +52,20 @@ export default class CommentWidget extends Component {
           onEnter={this.loadNew}
         />
 
-        <div className={styles.status}>
-          {this.state.more ? 'Aan het laden..' : 'Geen reaguursels meer..'}
-        </div>
+        {this.state.more ? <div style={{ position: 'relative' }}>
+          <RefreshIndicator
+            size={50}
+            left={0}
+            top={30}
+            status="loading"
+            style={{
+              display: 'inline-block',
+              position: 'relative',
+              marginLeft: '50%',
+              marginBottom: '50px',
+            }}
+          />
+        </div> : null}
 
       </div>
     </section>);
@@ -59,7 +73,9 @@ export default class CommentWidget extends Component {
 
 }
 
-CommentWidget.propTypes = {
-  title: PropTypes.string.isRequired,
+Comments.propTypes = {
   query: PropTypes.string.isRequired,
 };
+
+
+export { Banned, Deleted };

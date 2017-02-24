@@ -31,11 +31,16 @@
     "enzyme": "^2.4.1",
     "html-webpack-plugin": "^2.22.0",
     "kyt": "^0.3.0",
+    "material-ui": "^0.17.0",
     "normalize.css": "^5.0.0",
     "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-router": "^2.6.1",
+    "react-tap-event-plugin": "^2.0.1",
     "react-waypoint": "^5.0.2"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.23.0"
   }
 }
