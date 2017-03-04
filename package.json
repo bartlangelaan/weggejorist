@@ -35,12 +35,15 @@
     "normalize.css": "^5.0.0",
     "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
+    "react-animated-number": "^0.4.2",
     "react-dom": "^15.3.0",
     "react-router": "^2.6.1",
+    "react-sticky": "^5.0.5",
     "react-tap-event-plugin": "^2.0.1",
     "react-waypoint": "^5.0.2"
   },
   "devDependencies": {
-    "babel-polyfill": "^6.23.0"
+    "babel-polyfill": "^6.23.0",
+    "copy-webpack-plugin": "^4.0.1"
   }
 }
