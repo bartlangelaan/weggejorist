@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import AnimatedNumber from 'react-animated-number';
 import Paper from 'material-ui/Paper';
 import api from '../../api';
@@ -10,6 +10,11 @@ const Nr = ({ value, stepPrecision = 0 }) => {
   return (
     <AnimatedNumber value={value} stepPrecision={stepPrecision} formatValue={x => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} />
   );
+};
+
+Nr.propTypes = {
+  value: PropTypes.number.isRequired,
+  stepPrecision: PropTypes.number,
 };
 
 export default class Stats extends Component {
@@ -70,14 +75,15 @@ export default class Stats extends Component {
 
     return (<div>
       {stats ? (
-        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center'}}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
 
           {stats.worker.comments.scannedVideos !== stats.items.count ? (
             <Paper style={paperStyle}>
               <div style={bigStyle}>
                 <Nr
                   value={(stats.worker.comments.scannedVideos / stats.items.count) * 100}
-                  stepPrecision={3} />
+                  stepPrecision={3}
+                />
                 %
               </div>
               <div>procent van alle comments opgehaald</div>
