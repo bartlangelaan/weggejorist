@@ -49,7 +49,7 @@ export default class Stats extends Component {
       })
       .catch()
       .then(() => {
-        if (this.timer) this.timer = setTimeout(this.refresh, 500);
+        if (this.timer) this.timer = setTimeout(this.refresh, 2000);
       });
   }
 
