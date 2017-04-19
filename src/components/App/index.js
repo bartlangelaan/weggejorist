@@ -10,7 +10,7 @@ injectTapEventPlugin();
 
 function App({ children, location, history }) {
   return (
-    <StickyContainer style={{ overflowX: 'hidden' }}>
+    <StickyContainer style={{ overflow: 'hidden' }}>
       <AppBar
         title="Weggejorist"
         showMenuIconButton={false}
